@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khedr</title>
+</head>
+<body>
+    
+    <style>
+        body{
+            
+            background-color: #FFE0AE;
+        }
+    </style>
+
+
+     <input type="password" autofocus > <br>
+     <button id="btn1">Show</button>
+     <p id="msg" style="color: #738FA7; font-size: 40px;"></p>
+
+<script>
+  let btn1 = document.querySelector("button");
+  let input = document.querySelector("input");
+  let msg = document.getElementById("msg");
+
+  function task2() {
+    
+    if (input.value == "" ) {
+      
+        msg.textContent = "من فضلك اكتب الباسورد الأول";
+        return;
+    }
+
+   
+if (input.type == "password") {
+      
+      
+        input.type = "text";
+      btn1.innerHTML = "Hide";
+    } 
+    
+    else {
+      
+      
+        input.type = "password";
+        btn1.innerHTML = "Show";
+    }
+  
+    msg.textContent = "";
+  }
+
+  btn1.addEventListener("click", task2);
+</script>
+
+
+
+
+
+    </script>
+</body>
+</html>
